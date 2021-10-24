@@ -19615,7 +19615,7 @@ components:
     AuthenticationSettings:
       type: object
       properties:
-        2fa:
+        '2fa':
           type: boolean
           description: Whether two-factor authentication is enabled.
           example: false
@@ -20760,6 +20760,7 @@ components:
           example: ""
         endTime:
           type: string
+          format: date-time
           description: The end time of the scan in ISO8601 format.
           example: ""
         engineId:
@@ -20799,6 +20800,7 @@ components:
           type: string
         startTime:
           type: string
+          format: date-time
           description: The start time of the scan in ISO8601 format.
           example: ""
         startedBy:
@@ -21157,6 +21159,7 @@ components:
           example: false
         expires:
           type: string
+          format: date-time
           description: The date and time the license expires.
           example: 2018-12-31T23:59:59.999Z
         features:
@@ -26648,6 +26651,7 @@ components:
           example: default
         created:
           type: string
+          format: date-time
           description: The date and time the tag was created.
           example: 2017-10-07T23:50:01.205Z
         id:
@@ -27123,6 +27127,7 @@ components:
       properties:
         added:
           type: string
+          format: date
           description: The date the vulnerability coverage was added. The format is
             an ISO 8601 date, `YYYY-MM-DD`.
           example: 2017-10-10
@@ -27165,6 +27170,7 @@ components:
           format: int32
         modified:
           type: string
+          format: date
           description: The last date the vulnerability was modified. The format is
             an ISO 8601 date, `YYYY-MM-DD`.
           example: 2017-10-10
@@ -27172,6 +27178,7 @@ components:
           $ref: '#/components/schemas/PCI'
         published:
           type: string
+          format: date
           description: The date the vulnerability was first published or announced.
             The format is an ISO 8601 date, `YYYY-MM-DD`.
           example: 2017-10-10
