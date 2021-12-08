@@ -19615,10 +19615,10 @@ components:
     AuthenticationSettings:
       type: object
       properties:
-        '2fa':
-          type: boolean
-          description: Whether two-factor authentication is enabled.
-          example: false
+#        '2fa':
+#          type: boolean
+#          description: Whether two-factor authentication is enabled.
+#          example: false
         loginLockThreshold:
           type: integer
           description: The maximum number of failed login attempts for an account
