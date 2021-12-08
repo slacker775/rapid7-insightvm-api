@@ -9,7 +9,7 @@ use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
 use Http\Message\Formatter\FullHttpMessageFormatter;
-use Jane\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
+use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 use Rapid7\InsightVM\Api\Authentication\BasicAuthentication;

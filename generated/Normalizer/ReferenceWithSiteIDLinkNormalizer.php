@@ -2,7 +2,7 @@
 
 namespace Rapid7\InsightVM\Api\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use Jane\Component\JsonSchemaRuntime\Reference;
 use Rapid7\InsightVM\Api\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;

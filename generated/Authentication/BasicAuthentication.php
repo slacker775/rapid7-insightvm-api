@@ -2,7 +2,9 @@
 
 namespace Rapid7\InsightVM\Api\Authentication;
 
-class BasicAuthentication implements \Jane\OpenApiRuntime\Client\AuthenticationPlugin
+use Jane\Component\OpenApiRuntime\Client\AuthenticationPlugin;
+
+class BasicAuthentication implements AuthenticationPlugin
 {
     private $username;
     private $password;
