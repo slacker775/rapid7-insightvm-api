@@ -2,7 +2,7 @@
 
 namespace Rapid7\InsightVM\Api\Normalizer;
 
-use Jane\JsonSchemaRuntime\Reference;
+use Jane\Component\JsonSchemaRuntime\Reference;
 use Rapid7\InsightVM\Api\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
@@ -36,9 +36,6 @@ class AuthenticationSettingsNormalizer implements DenormalizerInterface, Normali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('2fa', $data)) {
-            $object->set2fa($data['2fa']);
-        }
         if (\array_key_exists('loginLockThreshold', $data)) {
             $object->setLoginLockThreshold($data['loginLockThreshold']);
         }
@@ -47,9 +44,6 @@ class AuthenticationSettingsNormalizer implements DenormalizerInterface, Normali
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->get2fa()) {
-            $data['2fa'] = $object->get2fa();
-        }
         if (null !== $object->getLoginLockThreshold()) {
             $data['loginLockThreshold'] = $object->getLoginLockThreshold();
         }
